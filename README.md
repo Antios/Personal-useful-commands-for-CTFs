@@ -47,6 +47,14 @@ ffuf -u URL -w "num1.txt:FUZZ1" -w "num2.txt:FUZZ2" -X POST -d "input-1=FUZZ1&in
 # Login bypass list
 /SecLists/loginBypass.txt
 
+# Add cookie on browser
+document.cookie=''
+
+# HTTP servers
+python -m SimpleHTTPServer 80
+python3 -m http.server
+ruby -rwebrick -e "WEBrick::HTTPServer.new(:Port => 80, :DocumentRoot => Dir.pwd).start"
+php -S $ip:80
 
 #---------------------------------------------------------------------------------------#
 
@@ -172,4 +180,20 @@ cat /etc/ssh/ssh_host_rsa_key.pub
 cat /etc/ssh/ssh_host_rsa_key
 cat /etc/ssh/ssh_host_key.pub
 cat /etc/ssh/ssh_host_key
+
+# Add new user
+useradd -p 'openssl passwd -1 <Password>' hacker
+
+
+
+
+#---------------------------------------------------------------------------------------#
+
+
+
+
+# Reversing:
+
+#Ghidra debugger
+
 ```
