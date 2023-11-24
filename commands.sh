@@ -3,9 +3,6 @@
 # Gather bulk information on target like DNS, CERTS, APIs
 amass -d IP
 
-# Test connection to a port 
-nc -v -v IP PORT
-
 # Find ports on IP
 nmap -v IP
 
@@ -13,9 +10,14 @@ nmap -v IP
 # https://github.com/maurosoria/dirsearch
 python3 dirsearch.py -u IP
 
+# Test connection to a port 
+nc -v -v IP PORT
+
+
 
 
 #---------------------------------------------------------------------------------------#
+
 
 
 
@@ -42,12 +44,30 @@ sqlmap -u "http://example.com/page?id=1" --dbs
 
 # Network
 
+# Get own wifi IP
+ifconfig en0
+
+# Using ICMP to ping
+ping IP
+
 # Basic ssh with port
 ssh username@IP -p PORT
 
 # Ping scan on a range of IP addresses within a specified subnet
 nmap -sn IP/24
 
+# Listen on a port with netcat Listen
+nc -v -v -n -l -p PORT
 
+# Netcat send to an IP
+nc IP PORT < FILE
 
+# Netcat take from the sender
+nc -l -p PORT > FILE
+
+# Create tunnel with socat
+socat TCP-LISTEN:LOCAL-PORT,fork TCP:TARGET-IP:TARGET-PORT
+
+# PHP reverse shell
+#https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
