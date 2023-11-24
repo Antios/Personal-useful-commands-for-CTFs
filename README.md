@@ -1,4 +1,4 @@
-# Personal-useful-commands-for-CTFs
+# Just a brain dump of info about CTFs that I can keep and go back to
 A brain dump of useful commands and code snippets for CTF challenges. Adding more as I go
 
 #### Commands :
