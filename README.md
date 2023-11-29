@@ -1,4 +1,4 @@
-# Just a brain dump of info about CTFs that I can keep and go back to
+# CTF commands that I can keep and go back to
 
 #### Commands :
 
