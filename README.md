@@ -143,6 +143,7 @@ ps aux
 ps -ef
 top
 cat /etc/service
+cat /etc/crontab
 
 # Which service(s) are been running by root?
 ps aux | grep root
@@ -199,6 +200,13 @@ cat /etc/ssh/ssh_host_key
 
 # Add new user
 useradd -p 'openssl passwd -1 <Password>' hacker
+
+# Find sudo programs and check on this site
+sudo -l
+https://gtfobins.github.io/
+
+# Check the NFS share configuration
+cat /etc/exports
 
 
 
