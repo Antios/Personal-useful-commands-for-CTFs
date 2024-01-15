@@ -208,6 +208,13 @@ https://gtfobins.github.io/
 # Check the NFS share configuration
 cat /etc/exports
 
+# Upgrade shell
+python3 -c 'import pty;pty.spawn("/bin/bash");'
+CTRL + Z         #backgrounds netcat session
+stty raw -echo
+fg               #brings netcat session back to the foreground
+export TERM=xterm
+
 
 
 
