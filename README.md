@@ -11,9 +11,12 @@ amass -d IP
 # Find ports on IP
 nmap -v IP
 
-# Use the diredtory search tool
+# Use the directory search tool
 # https://github.com/maurosoria/dirsearch
 python3 dirsearch.py -u IP
+
+# Use FFUF for dirtory search
+ffuf  -u URL/FUZZ -recursion -w wordlist.txt -mc 200
 
 # Test connection to a port 
 nc -v -v IP PORT
