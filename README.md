@@ -10,6 +10,7 @@ amass -d IP
 
 # Find ports on IP
 nmap -v IP
+nmap -sC -sV -A -T4 -p- <target-ip>
 
 # Use the directory search tool
 # https://github.com/maurosoria/dirsearch
