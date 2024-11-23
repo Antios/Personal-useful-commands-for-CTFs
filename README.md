@@ -49,6 +49,9 @@ nc -v -v IP PORT
 
 # Web:
 
+# Brute force jtw
+hashcat -m 16500 -a 0 jwt.txt rockyou.txt
+
 # XSS payloads 
 #https://github.com/payloadbox/xss-payload-list
 
