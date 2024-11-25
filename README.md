@@ -102,15 +102,6 @@ $(ls)
 
 # Network:
 
-# Get own wifi IP
-ifconfig en0
-
-# Using ICMP to ping
-ping IP
-
-# Basic ssh with port
-ssh username@IP -p PORT
-
 # Ping scan on a range of IP addresses within a specified subnet
 nmap -sn IP/24
 
