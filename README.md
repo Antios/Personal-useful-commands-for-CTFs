@@ -18,23 +18,13 @@ python3 dirsearch.py -u IP
 
 # Use FFUF for dirtory search
 ffuf  -u URL/FUZZ -recursion -w wordlist.txt -mc 200
-
-#https://github.com/ffuf/ffuf
-
-Written in Go so very fast 
-
-Directory Fuzzing
-
 ffuf -c -w /path/to/wordlist -u http://yahoo.com/FUZZ
 
-GET Parameter Fuzzing
-
+#GET Parameter Fuzzing
 ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs 4242
 
-POST Data Fuzzing
-
+#POST Data Fuzzing
 ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" -u https://target/login.php -fc 401
-
 
 # Test connection to a port 
 nc -v -v IP PORT
@@ -57,8 +47,6 @@ hashcat -m 16500 -a 0 jwt.txt rockyou.txt
 
 # SQL map
 sqlmap -u "http://example.com/page?id=1" --dbs
-
-# Burp suite
 
 # Flask template injection
 #https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html 
