@@ -232,7 +232,7 @@ export TERM=xterm
 
 # Reversing:
 
-#Ghidra debugger
+# Ghidra debugger
 
 
 
@@ -243,6 +243,18 @@ export TERM=xterm
 
 
 # OSINT
+
+# Google dorking cheatsheet
+https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06
+
+# Sherlock to find usernames across many platforms
+sherlock USERNAME
+
+# Tinyeye for reverse image search
+https://tineye.com/
+
+# Exif viewer
+exiftool <image>
 
 
 
